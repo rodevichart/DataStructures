@@ -1,26 +1,49 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace DataStructures
 {
     public class StringBalancer
     {
+        private static readonly char[] OPEN_CHARACTERS = {'<', '{', '[', '('};
+        private static readonly char[] CLOSE_CHARACTERS = {'>', '}', ']', ')'};
+
         public bool IsStringBalanced(string input)
         {
             var clearString = ClearStringFromRegularSings(input);
-            var inputStack = new Stack<char>();
+            var charactersStack = new Stack<char>();
 
             foreach (var character in clearString)
             {
-                inputStack.Push(character);
+                if (OPEN_CHARACTERS.Contains(character))
+                {
+                    charactersStack.Push(character);
+                }
+                if (CLOSE_CHARACTERS.Contains(character))
+                {
+                    if (!charactersStack.Any())
+                    {
+                        return false;
+                    }
+
+                    var top = charactersStack.Pop();
+                    if (!IsBracketsMatch(character, top))
+                    {
+                        return false;
+                    }
+                }
+
             }
 
-            var reverseString = new StringReverser();
+            return !charactersStack.Any();
+        }
 
-            var reverseStack = reverseString.ReverseStackFromString(clearString);
-
-            return true;
+        private bool IsBracketsMatch(char right, char left)
+        {
+            return Array.IndexOf(OPEN_CHARACTERS, left) == Array.IndexOf(CLOSE_CHARACTERS, right);
         }
 
         private string ClearStringFromRegularSings(string input)

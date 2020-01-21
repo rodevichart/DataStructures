@@ -52,9 +52,10 @@ namespace DataStructures
             #region String Balancer
 
             string input = "((<1> + <2>)) [a]";
+            //string input = "(1 + 2)";
             var stringBalancer = new StringBalancer();
 
-            stringBalancer.IsStringBalanced(input);
+            Console.WriteLine(stringBalancer.IsStringBalanced(input));
 
             #endregion
 
