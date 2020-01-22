@@ -80,12 +80,30 @@ namespace DataStructures
 
             #region ReverseQueue
 
-            var queues = new Queue<int>();
-            queues.Enqueue(10);
-            queues.Enqueue(20);
-            queues.Enqueue(30);
+            //var queues = new Queue<int>();
+            //queues.Enqueue(10);
+            //queues.Enqueue(20);
+            //queues.Enqueue(30);
 
-            QueueReverser.Reverse(queues);
+            //QueueReverser.Reverse(queues);
+
+            #endregion
+
+            #region ArrayQueue
+
+            var arrayQueue = new ArrayQueue();
+            
+            arrayQueue.Enqueue(10);
+            arrayQueue.Enqueue(20);
+            arrayQueue.Enqueue(30);
+            arrayQueue.Enqueue(40);
+
+            Console.WriteLine(arrayQueue.Dequeue());
+            Console.WriteLine(arrayQueue.Dequeue());
+
+            arrayQueue.Enqueue(50);
+            arrayQueue.Enqueue(60);
+            arrayQueue.Enqueue(70);
 
             #endregion
 
