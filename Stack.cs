@@ -6,7 +6,7 @@ namespace DataStructures
     public class Stack
     {
         private int?[] _stack;
-        private int _lastIndex = -1;
+        private int _count = -1;
 
         public bool IsEmpty => _stack.All(s => !s.HasValue);
         private bool IsFull => _stack.All(s => s.HasValue);
@@ -28,21 +28,23 @@ namespace DataStructures
                     _stack[index++] = element;
                 }
             }
-            _stack[++_lastIndex] = item;
+            _stack[++_count] = item;
         }
 
         public int? Pop()
         {
-            var item = _stack[_lastIndex];
-            _stack[_lastIndex] = null;
-            _lastIndex--;
+            if(_count == 0)
+                throw new InvalidOperationException();
+            var item = _stack[_count];
+            _stack[_count] = null;
+            _count--;
 
             return item;
         }
 
         public int? Peek()
         {
-           return _stack[_lastIndex];
+           return _stack[_count];
         }
     }
 }

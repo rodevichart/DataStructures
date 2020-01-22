@@ -61,21 +61,35 @@ namespace DataStructures
 
             #region Stack from scratch
 
-            var stack = new Stack(2);
+            //var stack = new Stack(2);
 
-            Console.WriteLine(stack.IsEmpty);
-            stack.Push(1);
-            stack.Push(2);
-            stack.Push(3);
+            //Console.WriteLine(stack.IsEmpty);
+            //stack.Push(1);
+            //stack.Push(2);
+            //stack.Push(3);
 
 
-            Console.WriteLine(stack.Pop());
-            Console.WriteLine(stack.Peek());
+            //Console.WriteLine(stack.Pop());
+            //Console.WriteLine(stack.Peek());
+
+            #endregion
+
+            #endregion
+
+            #region Queues
+
+            #region ReverseQueue
+
+            var queues = new Queue<int>();
+            queues.Enqueue(10);
+            queues.Enqueue(20);
+            queues.Enqueue(30);
+
+            QueueReverser.Reverse(queues);
 
             #endregion
 
             #endregion
-
         }
     }
 }
