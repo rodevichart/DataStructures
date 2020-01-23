@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace DataStructures
+namespace DataStructures.Stack
 {
     public class StringBalancer
     {

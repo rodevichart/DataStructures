@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace DataStructures
+namespace DataStructures.Stack
 {
     public class Stack
     {

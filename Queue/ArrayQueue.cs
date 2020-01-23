@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DataStructures
+namespace DataStructures.Queue
 {
     public class ArrayQueue
     {

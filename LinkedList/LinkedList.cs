@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Globalization;
 
-namespace DataStructures
+namespace DataStructures.LinkedList
 {
     public class LinkedList
     {
