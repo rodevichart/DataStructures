@@ -91,21 +91,41 @@ namespace DataStructures
 
             #region ArrayQueue
 
-            var arrayQueue = new ArrayQueue();
-            
-            arrayQueue.Enqueue(10);
-            arrayQueue.Enqueue(20);
-            arrayQueue.Enqueue(30);
-            arrayQueue.Enqueue(40);
+            //var arrayQueue = new ArrayQueue();
 
-            Console.WriteLine(arrayQueue.Dequeue());
-            Console.WriteLine(arrayQueue.Dequeue());
+            //arrayQueue.Enqueue(10);
+            //arrayQueue.Enqueue(20);
+            //arrayQueue.Enqueue(30);
+            //arrayQueue.Enqueue(40);
 
-            arrayQueue.Enqueue(50);
-            arrayQueue.Enqueue(60);
-            arrayQueue.Enqueue(70);
+            //Console.WriteLine(arrayQueue.Dequeue());
+            //Console.WriteLine(arrayQueue.Dequeue());
+
+            //arrayQueue.Enqueue(50);
+            //arrayQueue.Enqueue(60);
+            //arrayQueue.Enqueue(70);
 
             #endregion
+
+            #region StackQueue
+
+            var stackQueue = new StackQueue(4);
+
+            stackQueue.Enqueue(10);
+            stackQueue.Enqueue(20);
+            stackQueue.Enqueue(30);
+            stackQueue.Enqueue(40);
+
+            Console.WriteLine("stackQueue");
+            Console.WriteLine(stackQueue.Dequeue());
+            Console.WriteLine(stackQueue.Dequeue());
+            Console.WriteLine(stackQueue.Dequeue());
+            stackQueue.Enqueue(35);
+            Console.WriteLine(stackQueue.Dequeue());
+            Console.WriteLine(stackQueue.Dequeue());
+            Console.WriteLine(stackQueue.Dequeue());
+            #endregion
+
 
             #endregion
         }
