@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using DataStructures.Hash_Tables;
 using DataStructures.Queue;
 
 namespace DataStructures
@@ -123,18 +126,33 @@ namespace DataStructures
 
             #region PriorityQueue
 
-            var priorutyQueue = new PriorityQueue(5);
-            priorutyQueue.Insert(3);
-            priorutyQueue.Insert(1);
-            priorutyQueue.Insert(4);
-            priorutyQueue.Insert(6);
-            priorutyQueue.Insert(2);
+            //var priorutyQueue = new PriorityQueue(2);
+            //priorutyQueue.Insert(3);
+            //priorutyQueue.Insert(1);
+            //priorutyQueue.Insert(4);
+            //priorutyQueue.Insert(6);
+            //priorutyQueue.Insert(2);
             //priorutyQueue.Insert(5);
 
-            Console.WriteLine(priorutyQueue.Remove());
+           //Console.WriteLine(priorutyQueue.Remove());
 
             #endregion
 
+            #endregion
+
+            #region Hash Tables
+
+            var employee = new Dictionary<int, string>();
+
+            employee.Add(1, "Artsem");
+            employee.Add(2, "Yura");
+            employee.Add(3, "Gary");
+            
+            
+
+            employee.ToList().ForEach(e => Console.WriteLine(e.Value));
+
+            Console.WriteLine(ParseString.GetFirstNonRepeatableCharacter("A Green Apple"));
             #endregion
         }
     }
