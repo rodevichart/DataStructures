@@ -153,6 +153,7 @@ namespace DataStructures
             employee.ToList().ForEach(e => Console.WriteLine(e.Value));
 
             Console.WriteLine(ParseString.GetFirstNonRepeatableCharacter("A Green Apple"));
+            Console.WriteLine(ParseString.GetFirstRepeatCharacter("Green Apple"));
             #endregion
         }
     }

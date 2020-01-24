@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace DataStructures.Hash_Tables
 {
@@ -41,5 +40,25 @@ namespace DataStructures.Hash_Tables
             return returnCharacter;
         }
 
+        public static char GetFirstRepeatCharacter(string input)
+        {
+            var characters = input.ToLower();
+
+            var hashSet = new HashSet<char>();
+
+            foreach (var character in characters)
+            {
+                if (hashSet.Contains(character))
+                {
+                    return character;
+                }
+
+                hashSet.Add(character);
+            }
+
+           
+            return char.MinValue;
+        }
+
     }
-}
+} 
