@@ -25,9 +25,10 @@ namespace DataStructures.Queue
 
             if (_priorityQueue.Length == 1)
             {
-                if (_priorityQueue[0] > item)
+                if (_priorityQueue[0] <= item)
                 {
                     _priorityQueue[0] = item;
+                    _count++;
                 }
                 return;
             }
