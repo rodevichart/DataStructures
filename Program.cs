@@ -105,23 +105,35 @@ namespace DataStructures
 
             #region StackQueue
 
-            var stackQueue = new StackQueue(4);
+            //var stackQueue = new StackQueue(4);
 
-            stackQueue.Enqueue(10);
-            stackQueue.Enqueue(20);
-            stackQueue.Enqueue(30);
-            stackQueue.Enqueue(40);
+            //stackQueue.Enqueue(10);
+            //stackQueue.Enqueue(20);
+            //stackQueue.Enqueue(30);
+            //stackQueue.Enqueue(40);
 
-            Console.WriteLine("stackQueue");
-            Console.WriteLine(stackQueue.Dequeue());
-            Console.WriteLine(stackQueue.Dequeue());
-            Console.WriteLine(stackQueue.Dequeue());
-            stackQueue.Enqueue(35);
-            Console.WriteLine(stackQueue.Dequeue());
-            Console.WriteLine(stackQueue.Dequeue());
-            Console.WriteLine(stackQueue.Dequeue());
+            //Console.WriteLine(stackQueue.Dequeue());
+            //Console.WriteLine(stackQueue.Dequeue());
+            //Console.WriteLine(stackQueue.Dequeue());
+            //stackQueue.Enqueue(35);
+            //Console.WriteLine(stackQueue.Dequeue());
+            //Console.WriteLine(stackQueue.Dequeue());
+            //Console.WriteLine(stackQueue.Dequeue());
             #endregion
 
+            #region PriorityQueue
+
+            var priorutyQueue = new PriorityQueue(5);
+            priorutyQueue.Insert(3);
+            priorutyQueue.Insert(1);
+            priorutyQueue.Insert(4);
+            priorutyQueue.Insert(6);
+            priorutyQueue.Insert(2);
+            //priorutyQueue.Insert(5);
+
+            Console.WriteLine(priorutyQueue.Remove());
+
+            #endregion
 
             #endregion
         }
