@@ -134,7 +134,7 @@ namespace DataStructures
             //priorutyQueue.Insert(2);
             //priorutyQueue.Insert(5);
 
-           //Console.WriteLine(priorutyQueue.Remove());
+            //Console.WriteLine(priorutyQueue.Remove());
 
             #endregion
 
@@ -142,18 +142,35 @@ namespace DataStructures
 
             #region Hash Tables
 
-            var employee = new Dictionary<int, string>();
+            //var employee = new Dictionary<int, string>();
 
-            employee.Add(1, "Artsem");
-            employee.Add(2, "Yura");
-            employee.Add(3, "Gary");
-            
-            
+            //employee.Add(1, "Artsem");
+            //employee.Add(2, "Yura");
+            //employee.Add(3, "Gary");
 
-            employee.ToList().ForEach(e => Console.WriteLine(e.Value));
 
-            Console.WriteLine(ParseString.GetFirstNonRepeatableCharacter("A Green Apple"));
-            Console.WriteLine(ParseString.GetFirstRepeatCharacter("Green Apple"));
+
+            //employee.ToList().ForEach(e => Console.WriteLine(e.Value));
+
+            //Console.WriteLine(ParseString.GetFirstNonRepeatableCharacter("A Green Apple"));
+            //Console.WriteLine(ParseString.GetFirstRepeatCharacter("Green Apple"));
+
+            #region Custom HashTable
+
+            var hashTable = new HashTable(5);
+
+            hashTable.Put(6, "A");
+            hashTable.Put(8, "B");
+            hashTable.Put(11, "C");
+
+            Console.WriteLine(hashTable.Get(8));
+            Console.WriteLine(hashTable.Get(6));
+            Console.WriteLine(hashTable.Get(11));
+            Console.WriteLine(hashTable.Get(10));
+
+            hashTable.Remove(11);
+            #endregion
+
             #endregion
         }
     }
