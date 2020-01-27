@@ -166,7 +166,7 @@ namespace DataStructures
             Console.WriteLine(hashTable.Get(8));
             Console.WriteLine(hashTable.Get(6));
             Console.WriteLine(hashTable.Get(11));
-            Console.WriteLine(hashTable.Get(10));
+            //Console.WriteLine(hashTable.Get(10));
 
             hashTable.Remove(11);
             #endregion
