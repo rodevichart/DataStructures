@@ -22,10 +22,14 @@ namespace DataStructures
             //    Console.WriteLine(i);
             //}
 
-            //var list = new LinkedList();
-            //list.AddLast(10);
-            //list.AddLast(20);
-            //list.AddLast(30);
+            var list = new LinkedList.LinkedList();
+            list.AddLast(10);
+            list.AddLast(20);
+            list.AddLast(30);
+            list.AddLast(40);
+            list.AddLast(50);
+
+            Console.WriteLine(list.GetKthNodeFromTheEnd(3));
 
             //list.AddFirst(5);
 
@@ -122,6 +126,7 @@ namespace DataStructures
             //Console.WriteLine(stackQueue.Dequeue());
             //Console.WriteLine(stackQueue.Dequeue());
             //Console.WriteLine(stackQueue.Dequeue());
+
             #endregion
 
             #region PriorityQueue
@@ -157,18 +162,19 @@ namespace DataStructures
 
             #region Custom HashTable
 
-            var hashTable = new HashTable(5);
+            //var hashTable = new HashTable(5);
 
-            hashTable.Put(6, "A");
-            hashTable.Put(8, "B");
-            hashTable.Put(11, "C");
+            //hashTable.Put(6, "A");
+            //hashTable.Put(8, "B");
+            //hashTable.Put(11, "C");
 
-            Console.WriteLine(hashTable.Get(8));
-            Console.WriteLine(hashTable.Get(6));
-            Console.WriteLine(hashTable.Get(11));
-            //Console.WriteLine(hashTable.Get(10));
+            //Console.WriteLine(hashTable.Get(8));
+            //Console.WriteLine(hashTable.Get(6));
+            //Console.WriteLine(hashTable.Get(11));
+            ////Console.WriteLine(hashTable.Get(10));
 
-            hashTable.Remove(11);
+            //hashTable.Remove(11);
+
             #endregion
 
             #endregion

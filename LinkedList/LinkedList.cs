@@ -7,6 +7,9 @@ namespace DataStructures.LinkedList
         private Node First { get; set; }
         private Node Last { get; set; }
 
+        private Node FirstPointer { get; set; }
+        private Node SecondPointer { get; set; }
+
         private bool IsEmpty => First == null;
 
         //AddLast
@@ -128,6 +131,24 @@ namespace DataStructures.LinkedList
             }
 
             return null;
+        }
+        public int GetKthNodeFromTheEnd(int k)
+        {
+            FirstPointer = SecondPointer = First;
+
+            for (var i = 0; i < k - 1; i++)
+            {
+                SecondPointer = SecondPointer.Next;
+            }
+
+            while (SecondPointer != Last)
+            {
+                FirstPointer = FirstPointer.Next;
+                SecondPointer = SecondPointer.Next;
+            }
+
+            return FirstPointer.Value;
+
         }
     }
 }
