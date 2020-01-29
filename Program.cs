@@ -193,6 +193,7 @@ namespace DataStructures
             binaryTree.Insert(18);
             binaryTree.Insert(17);
 
+            Console.WriteLine(binaryTree.Find(8));
             #endregion
         }
     }
