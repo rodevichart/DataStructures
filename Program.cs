@@ -178,6 +178,22 @@ namespace DataStructures
             #endregion
 
             #endregion
+
+            #region Binary Tree
+
+            var binaryTree = new BinaryTree.BinaryTree();
+            //10, 5, 15, 6, 1, 8, 12, 18, 17
+            binaryTree.Insert(10);
+            binaryTree.Insert(5);
+            binaryTree.Insert(15);
+            binaryTree.Insert(6);
+            binaryTree.Insert(1);
+            binaryTree.Insert(8);
+            binaryTree.Insert(12);
+            binaryTree.Insert(18);
+            binaryTree.Insert(17);
+
+            #endregion
         }
     }
 }
