@@ -1,4 +1,7 @@
-﻿namespace DataStructures.BinaryTree
+﻿using System;
+using System.Runtime.Remoting.Messaging;
+
+namespace DataStructures.BinaryTree
 {
     public class BinaryTree
     {
@@ -60,6 +63,57 @@
             }
 
             return false;
+        }
+
+        public void TraversePreOrder()
+        {
+            TraversePreOrder(_root);
+        }
+
+        public void TraversePostOrder()
+        {
+            TraversePostOrder(_root);
+        }
+
+        public void TraverseInOrder()
+        {
+            TraverseInOrder(_root);
+        }
+
+        private void TraversePreOrder(Node root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+
+            Console.WriteLine(root.Value);
+            TraversePreOrder(root.LeftChild);
+            TraversePreOrder(root.RightChild);
+        }
+
+        private void TraverseInOrder(Node root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            
+            TraverseInOrder(root.LeftChild);
+            Console.WriteLine(root.Value);
+            TraverseInOrder(root.RightChild);
+        }
+
+        private void TraversePostOrder(Node root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+
+            TraverseInOrder(root.LeftChild);
+            TraverseInOrder(root.RightChild);
+            Console.WriteLine(root.Value);
         }
     }
 }
