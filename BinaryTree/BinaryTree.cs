@@ -12,21 +12,17 @@
                 return;
             }
 
-            var item = SearchNode(value);
-            item.Value = value;
-        }
-
-        private Node SearchNode(int value)
-        {
             var current = _root;
+            var node = new Node {Value = value};
 
-            while (current != null)
+            while (true)
             {
                 if (current.Value > value)
                 {
                     if (current.LeftChild == null)
                     {
-                        return current.LeftChild = new Node();
+                        current.LeftChild = node;
+                        return;
                     }
                     current = current.LeftChild;
                 }
@@ -34,20 +30,36 @@
                 {
                     if (current.RightChild == null)
                     {
-                        return current.RightChild = new Node();
+                        current.RightChild = node;
+                        return;
                     }
                     current = current.RightChild;
                 }
 
             }
-
-            return current;
         }
 
         public bool Find(int value)
         {
-            var item = SearchNode(value);
-            return item?.Value != 0;
+            var current = _root;
+            while (current != null)
+            {
+                if (current.Value > value)
+                {
+                    current = current.LeftChild;
+                }
+                else if(current.Value < value)
+                {
+                    current = current.RightChild;
+                }
+                else
+                {
+                    return true;
+                }
+
+            }
+
+            return false;
         }
     }
 }
