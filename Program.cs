@@ -180,21 +180,45 @@ namespace DataStructures
             #endregion
 
             #region Binary Tree
-
+            //20,10,30,6,3,8
             var binaryTree = new BinaryTree.BinaryTree();
-            binaryTree.Insert(7);
-            binaryTree.Insert(4);
-            binaryTree.Insert(9);
-            binaryTree.Insert(1);
+            binaryTree.Insert(20);
+            binaryTree.Insert(10);
+            binaryTree.Insert(30);
             binaryTree.Insert(6);
+            binaryTree.Insert(3);
             binaryTree.Insert(8);
             binaryTree.Insert(10);
+            binaryTree.Insert(21);
 
-            binaryTree.TraversePostOrder();
+            //foreach (var kDistanceNode in binaryTree.GetKDistanceNodes(3))
+            //{
+            //    Console.WriteLine(kDistanceNode);                
+            //}
+
+            binaryTree.TraversLevelOrder();
+            
+
+            //var secondBinaryTree = new BinaryTree.BinaryTree();
+            //secondBinaryTree.Insert(7);
+            //secondBinaryTree.Insert(4);
+            //secondBinaryTree.Insert(9);
+            //secondBinaryTree.Insert(1);
+            //secondBinaryTree.Insert(6);
+            //secondBinaryTree.Insert(8);
+            //secondBinaryTree.Insert(10);
+
+            //Console.WriteLine(binaryTree.IsBinarySearchTree());
+
+
+            //Console.WriteLine(binaryTree.Equals(secondBinaryTree));
+            //Console.WriteLine(binaryTree.Height());
+            //Console.WriteLine(binaryTree.Min());
 
             //Console.WriteLine(binaryTree.Find(9));
 
             //7,4,9,1,6,8,10
+
             #endregion
         }
     }
