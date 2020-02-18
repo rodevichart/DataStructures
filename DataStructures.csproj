@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BinaryTree\AVLNode.cs" />
+    <Compile Include="BinaryTree\AVLTree.cs" />
     <Compile Include="BinaryTree\BinaryTree.cs" />
     <Compile Include="BinaryTree\Node.cs" />
     <Compile Include="Hash Tables\HashTable.cs" />

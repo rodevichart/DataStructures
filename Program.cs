@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using DataStructures.BinaryTree;
 using DataStructures.Hash_Tables;
 using DataStructures.Queue;
 
@@ -180,24 +181,24 @@ namespace DataStructures
             #endregion
 
             #region Binary Tree
-            //20,10,30,6,3,8
-            var binaryTree = new BinaryTree.BinaryTree();
-            binaryTree.Insert(20);
-            binaryTree.Insert(10);
-            binaryTree.Insert(30);
-            binaryTree.Insert(6);
-            binaryTree.Insert(3);
-            binaryTree.Insert(8);
-            binaryTree.Insert(10);
-            binaryTree.Insert(21);
+            //20,10,30,6,3,8,21
+            //var binaryTree = new BinaryTree.BinaryTree();
+            //binaryTree.Insert(20);
+            //binaryTree.Insert(10);
+            //binaryTree.Insert(30);
+            //binaryTree.Insert(6);
+            //binaryTree.Insert(3);
+            //binaryTree.Insert(8);
+            //binaryTree.Insert(10);
+            //binaryTree.Insert(21);
 
             //foreach (var kDistanceNode in binaryTree.GetKDistanceNodes(3))
             //{
             //    Console.WriteLine(kDistanceNode);                
             //}
 
-            binaryTree.TraversLevelOrder();
-            
+            //binaryTree.TraversLevelOrder();
+
 
             //var secondBinaryTree = new BinaryTree.BinaryTree();
             //secondBinaryTree.Insert(7);
@@ -218,6 +219,16 @@ namespace DataStructures
             //Console.WriteLine(binaryTree.Find(9));
 
             //7,4,9,1,6,8,10
+
+            #endregion
+
+            #region AVL Tree
+
+            var avlTree = new AVLTree();
+
+            avlTree.Insert(10);
+            avlTree.Insert(15);
+            avlTree.Insert(20);
 
             #endregion
         }
