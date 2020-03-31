@@ -1,4 +1,6 @@
-﻿namespace DataStructures.BinaryTree
+﻿using System;
+
+namespace DataStructures.BinaryTree
 {
     public class AVLTree
     {
@@ -25,6 +27,8 @@
             {
                root.RightChild = Insert(root.RightChild, value);
             }
+
+            root.Height = Math.Max(root.LeftChild.Value, root.RightChild.Value) + 1;
 
             return root;
         }
